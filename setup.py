@@ -1,13 +1,12 @@
 from setuptools import setup, find_packages
-import os
 
-version = '1.0'
+version = '1.0dev'
 
 setup(name='collective.noindexing',
       version=version,
       description="Ignore all indexing operations",
       long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+                       open("CHANGES.txt").read(),
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
