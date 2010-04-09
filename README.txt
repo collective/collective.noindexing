@@ -1,5 +1,12 @@
+.. contents::
+
+
+Documentation
+=============
+
+
 Goal and usage
-==============
+--------------
 
 Add collective.noindexing to the eggs in your buildout (and to zcml on
 Plone 3.2 or earlier).  This makes two browser views available on the
