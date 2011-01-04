@@ -6,15 +6,15 @@ logger = logging.getLogger(__name__)
 
 
 def indexObject(self, *args, **kwargs):
-    logger.info("Ignoring indexObject call.")
+    logger.debug("Ignoring indexObject call.")
 
 
 def unindexObject(self, *args, **kwargs):
-    logger.info("Ignoring unindexObject call.")
+    logger.debug("Ignoring unindexObject call.")
 
 
 def reindexObject(self, *args, **kwargs):
-    logger.info("Ignoring reindexObject call.")
+    logger.debug("Ignoring reindexObject call.")
 
 catalogMultiplexMethods = {}
 catalogAwareMethods = {}
@@ -36,6 +36,7 @@ def apply():
             logger.info('patched %s', str(module.indexObject))
             logger.info('patched %s', str(module.reindexObject))
             logger.info('patched %s', str(module.unindexObject))
+            logger.warn('Indexing operations will be ignored from now on.')
 
 
 def unapply():
@@ -50,3 +51,4 @@ def unapply():
         logger.info('unpatched %s', str(module.indexObject))
         logger.info('unpatched %s', str(module.reindexObject))
         logger.info('unpatched %s', str(module.unindexObject))
+        logger.warn('Indexing operations will be resumed from now on.')
