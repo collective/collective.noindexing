@@ -36,7 +36,7 @@ Notes
   not deliberate, so it might change in the future, but for now I do
   not mind.  It works fine for folders in Plone 4.
 
-- I have not tested if this works with Dexterity content.
+- It works for Dexterity content too.
 
 
 Alternatives
