@@ -45,9 +45,10 @@ def unapply():
                               (CatalogMultiplex, catalogMultiplexMethods)):
         if not container:
             continue
-        module.indexObject = container['index']
-        module.reindexObject = container['reindex']
-        module.unindexObject = container['unindex']
+        # We use 'pop' to make the dictionary empty again.
+        module.indexObject = container.pop('index')
+        module.reindexObject = container.pop('reindex')
+        module.unindexObject = container.pop('unindex')
         logger.info('unpatched %s', str(module.indexObject))
         logger.info('unpatched %s', str(module.reindexObject))
         logger.info('unpatched %s', str(module.unindexObject))

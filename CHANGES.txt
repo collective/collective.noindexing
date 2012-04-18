@@ -4,6 +4,9 @@ Changelog
 1.2 (unreleased)
 ----------------
 
+- Fixed the unapply method so a second apply will work correctly.
+  [maurits]
+
 - Added tests with plone.app.testing.
   [maurits]
 
