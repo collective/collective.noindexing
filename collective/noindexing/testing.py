@@ -1,5 +1,4 @@
 from Products.CMFCore.utils import getToolByName
-from plone.testing import z2
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
@@ -12,16 +11,10 @@ class NoIndexingLayer(PloneSandboxLayer):
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
-        # Install product
-        z2.installProduct(app, 'collective.noindexing')
         # Load ZCML
         import collective.noindexing
         xmlconfig.file('configure.zcml', collective.noindexing,
                       context=configurationContext)
-
-    def tearDownZope(self, app):
-        # Uninstall product
-        z2.uninstallProduct(app, 'collective.noindexing')
 
 
 class NoIndexingAppliedLayer(NoIndexingLayer):
