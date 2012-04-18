@@ -4,7 +4,9 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added compatibility with Plone 4.1, by loading Products.CMFCore zcml
+  for the permissions.
+  [maurits]
 
 
 1.1 (2011-01-04)
