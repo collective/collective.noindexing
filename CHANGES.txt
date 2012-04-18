@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2012-04-18)
 ----------------
 
 - Fixed the unapply method so a second apply will work correctly.
