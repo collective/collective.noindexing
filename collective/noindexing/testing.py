@@ -1,4 +1,3 @@
-from Products.CMFCore.utils import getToolByName
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
@@ -39,13 +38,10 @@ NOINDEXING_APPLIED_INTEGRATION_TESTING = IntegrationTesting(
 # A few helper functions.
 
 
-def make_test_doc(portal, transition=None):
+def make_test_doc(portal):
     new_id = portal.generateUniqueId('Document')
     portal.invokeFactory('Document', new_id)
     doc = portal[new_id]
-    if transition is not None:
-        wf_tool = getToolByName(portal, 'portal_workflow')
-        wf_tool.doActionFor(doc, transition)
     doc.reindexObject()  # Might have already happened, but let's be sure.
     return doc
 

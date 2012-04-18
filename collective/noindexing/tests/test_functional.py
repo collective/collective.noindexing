@@ -16,8 +16,8 @@ class TestNormalIndexing(unittest.TestCase):
 
     layer = NOINDEXING_INTEGRATION_TESTING
 
-    def _makeOne(self, transition=None):
-        return make_test_doc(self.layer['portal'], transition)
+    def _makeOne(self):
+        return make_test_doc(self.layer['portal'])
 
     def testNormalIndexing(self):
         portal = self.layer['portal']
@@ -34,8 +34,8 @@ class TestNoIndexingApplied(unittest.TestCase):
 
     layer = NOINDEXING_APPLIED_INTEGRATION_TESTING
 
-    def _makeOne(self, transition=None):
-        return make_test_doc(self.layer['portal'], transition)
+    def _makeOne(self):
+        return make_test_doc(self.layer['portal'])
 
     def testNotIndexed(self):
         portal = self.layer['portal']
