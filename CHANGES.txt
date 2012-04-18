@@ -4,6 +4,9 @@ Changelog
 1.2 (unreleased)
 ----------------
 
+- Added tests with plone.app.testing.
+  [maurits]
+
 - Added compatibility with Plone 4.1, by loading Products.CMFCore zcml
   for the permissions.
   [maurits]
