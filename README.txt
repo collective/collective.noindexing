@@ -27,9 +27,16 @@ some intermediate commits can help here for large sites; see for
 example
 http://svn.plone.org/svn/plone/Products.PloneOrg/trunk/scripts/catalog_rebuild.py
 
-Note: the patches do not apply to ``ATBTreeFolders`` like the standard
-Members, events and news Large Plone Folders.  This is not deliberate,
-so it might change in the future, but for now I do not mind.
+
+Notes
+-----
+
+- The patches do not apply to ``ATBTreeFolders`` like the standard
+  Members, events and news Large Plone Folders from Plone 3.  This is
+  not deliberate, so it might change in the future, but for now I do
+  not mind.  It works fine for folders in Plone 4.
+
+- I have not tested if this works with Dexterity content.
 
 
 Alternatives
