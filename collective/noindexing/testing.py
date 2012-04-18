@@ -8,7 +8,7 @@ from zope.configuration import xmlconfig
 from zope.component import getMultiAdapter
 
 
-class NoindexingLayer(PloneSandboxLayer):
+class NoIndexingLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
 
@@ -25,9 +25,9 @@ class NoindexingLayer(PloneSandboxLayer):
         z2.uninstallProduct(app, 'collective.noindexing')
 
 
-NOINDEXING_FIXTURE = NoindexingLayer()
+NOINDEXING_FIXTURE = NoIndexingLayer()
 NOINDEXING_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(NOINDEXING_FIXTURE,), name="Noindexing:Integration")
+    bases=(NOINDEXING_FIXTURE,), name="NoIndexing:Integration")
 
 # A few helper functions.
 
