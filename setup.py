@@ -6,7 +6,7 @@ setup(name='collective.noindexing',
       version=version,
       description="Ignore all indexing operations",
       long_description=open("README.txt").read() + "\n" +
-                       open("CHANGES.txt").read(),
+                       open("CHANGES.rst").read(),
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
