@@ -4,7 +4,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Moved to https://github.com/collective/collective.noindexing
+  [maurits]
 
 
 1.2 (2012-04-18)
