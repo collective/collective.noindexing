@@ -4,6 +4,9 @@ Changelog
 1.3 (unreleased)
 ----------------
 
+- Add more (test) dependencies in setup.py.
+  [maurits]
+
 - Moved to https://github.com/collective/collective.noindexing
   [maurits]
 

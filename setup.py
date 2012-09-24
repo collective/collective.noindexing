@@ -27,10 +27,14 @@ setup(name='collective.noindexing',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'Products.Archetypes',
+          'Products.CMFCore',
       ],
       extras_require={
-          'test': ['plone.app.testing'],
+          'test': ['plone.app.testing',
+                   'unittest2',
+                   'zope.configuration',
+                   'zope.component'],
       },
       entry_points="""
       # -*- Entry points: -*-
