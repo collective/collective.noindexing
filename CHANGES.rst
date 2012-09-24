@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3 (unreleased)
+1.3 (2012-09-24)
 ----------------
 
 - Add more (test) dependencies in setup.py.
