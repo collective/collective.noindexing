@@ -15,6 +15,17 @@ Plone Site root: ``@@collective-noindexing-apply`` and
 and the second undoes the patching.  Both can be called multiple times
 safely.
 
+Patch only a single index (reindex, index, unindex) is also possible:
+``@@collective-noindexing-apply?no-reindex=1``
+``@@collective-noindexing-apply?no-index=1``
+``@@collective-noindexing-apply?no-unindex=1``
+
+Or combined:
+``@@collective-noindexing-apply?no-unindex=1&no-reindex=1``
+
+Or all:
+``@@collective-noindexing-apply``
+
 This patches some catalog methods so no indexing, reindexing or
 unindexing is done at all.  The idea is that you use this package so
 you can quickly move a big part of your Plone Site to a different

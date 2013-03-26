@@ -20,7 +20,7 @@ catalogMultiplexMethods = {}
 catalogAwareMethods = {}
 
 
-def apply():
+def apply(reindex=True, index=True, unindex=True):
     # Hook up the new methods.
     for module, container in ((CMFCatalogAware, catalogAwareMethods),
                               (CatalogMultiplex, catalogMultiplexMethods)):
@@ -30,12 +30,15 @@ def apply():
                 'reindex': module.reindexObject,
                 'unindex': module.unindexObject,
             })
-            module.indexObject = indexObject
-            module.reindexObject = reindexObject
-            module.unindexObject = unindexObject
-            logger.info('patched %s', str(module.indexObject))
-            logger.info('patched %s', str(module.reindexObject))
-            logger.info('patched %s', str(module.unindexObject))
+            if index==True:
+                module.indexObject = indexObject
+                logger.info('index patched %s', str(module.indexObject))
+            if reindex==True:
+                module.reindexObject = reindexObject
+                logger.info('reindex patched %s', str(module.reindexObject))
+            if unindex==True:
+                module.unindexObject = unindexObject
+                logger.info('unindex patched %s', str(module.unindexObject))
             logger.warn('Indexing operations will be ignored from now on.')
 
 

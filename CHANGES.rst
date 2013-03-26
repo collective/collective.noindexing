@@ -4,7 +4,8 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- make patching a single index method (index, reindex, unindex) possible
+  [maartenkling]
 
 
 1.3 (2012-09-24)
