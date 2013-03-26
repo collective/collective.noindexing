@@ -30,13 +30,13 @@ def apply(reindex=True, index=True, unindex=True):
                 'reindex': module.reindexObject,
                 'unindex': module.unindexObject,
             })
-            if index==True:
+            if index:
                 module.indexObject = indexObject
                 logger.info('index patched %s', str(module.indexObject))
-            if reindex==True:
+            if reindex:
                 module.reindexObject = reindexObject
                 logger.info('reindex patched %s', str(module.reindexObject))
-            if unindex==True:
+            if unindex:
                 module.unindexObject = unindexObject
                 logger.info('unindex patched %s', str(module.unindexObject))
             logger.warn('Indexing operations will be ignored from now on.')

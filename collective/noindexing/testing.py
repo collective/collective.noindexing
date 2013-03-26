@@ -57,11 +57,11 @@ def apply_patches(portal):
     But it is good to use the browser view here.
     """
     view = getMultiAdapter((portal, portal.REQUEST),
-                            name='collective-noindexing-apply')
+                           name='collective-noindexing-apply')
     view()
 
 
 def unapply_patches(portal):
     view = getMultiAdapter((portal, portal.REQUEST),
-                            name='collective-noindexing-unapply')
+                           name='collective-noindexing-unapply')
     view()
