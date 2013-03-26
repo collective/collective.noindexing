@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4 (unreleased)
+1.4 (2013-03-26)
 ----------------
 
 - make patching a single index method (index, reindex, unindex) possible
