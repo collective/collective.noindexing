@@ -4,6 +4,8 @@
 .installed.cfg
 .mr.developer.cfg
 bin
+lib
+include
 build
 develop-eggs
 dist
@@ -12,3 +14,4 @@ eggs
 fake-eggs
 parts
 var
+pip-selfcheck.json
