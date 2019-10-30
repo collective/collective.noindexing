@@ -32,7 +32,6 @@ setup(name='collective.noindexing',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Products.Archetypes',
           'Products.CMFCore',
       ],
       extras_require={
