@@ -1,10 +1,12 @@
 Changelog
 =========
 
-1.5 (unreleased)
-----------------
+2.0.0b1 (unreleased)
+--------------------
 
-- Nothing changed yet.
+- Removed support for Python 2.6 or lower and Plone 4.2 and lower.  [maurits]
+
+- Added Plone 5 compatibility.  Do not require Archetypes.  [gotcha]
 
 
 1.4 (2013-03-26)
