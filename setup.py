@@ -5,7 +5,7 @@ version = '1.5.dev0'
 setup(name='collective.noindexing',
       version=version,
       description="Ignore all indexing operations",
-      long_description=(open("README.txt").read() + "\n" +
+      long_description=(open("README.rst").read() + "\n" +
                         open("CHANGES.rst").read()),
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -32,7 +32,6 @@ setup(name='collective.noindexing',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Products.Archetypes',
           'Products.CMFCore',
       ],
       extras_require={

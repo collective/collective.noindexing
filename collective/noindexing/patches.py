@@ -1,6 +1,15 @@
 import logging
 from Products.CMFCore.CMFCatalogAware import CMFCatalogAware
-from Products.Archetypes.CatalogMultiplex import CatalogMultiplex
+
+import pkg_resources
+
+try:
+    pkg_resources.get_distribution("Products.Archetypes")
+except pkg_resources.DistributionNotFound:
+    HAS_ARCHETYPES = False
+else:
+    HAS_ARCHETYPES = True
+    from Products.Archetypes.CatalogMultiplex import CatalogMultiplex
 
 logger = logging.getLogger(__name__)
 
@@ -16,14 +25,18 @@ def unindexObject(self, *args, **kwargs):
 def reindexObject(self, *args, **kwargs):
     logger.debug("Ignoring reindexObject call.")
 
+
 catalogMultiplexMethods = {}
 catalogAwareMethods = {}
+
+TO_PATCH = [(CMFCatalogAware, catalogAwareMethods)]
+if HAS_ARCHETYPES:
+    TO_PATCH.append((CatalogMultiplex, catalogMultiplexMethods))
 
 
 def apply(reindex=True, index=True, unindex=True):
     # Hook up the new methods.
-    for module, container in ((CMFCatalogAware, catalogAwareMethods),
-                              (CatalogMultiplex, catalogMultiplexMethods)):
+    for module, container in TO_PATCH:
         if not container:
             container.update({
                 'index': module.indexObject,
@@ -44,8 +57,7 @@ def apply(reindex=True, index=True, unindex=True):
 
 def unapply():
     # Hook up the old methods.
-    for module, container in ((CMFCatalogAware, catalogAwareMethods),
-                              (CatalogMultiplex, catalogMultiplexMethods)):
+    for module, container in TO_PATCH:
         if not container:
             continue
         # We use 'pop' to make the dictionary empty again.
