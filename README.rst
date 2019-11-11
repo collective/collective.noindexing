@@ -8,17 +8,17 @@ Documentation
 Goal and usage
 --------------
 
-Add collective.noindexing to the eggs in your buildout (and to zcml on
-Plone 3.2 or earlier).  This makes two browser views available on the
-Plone Site root: ``@@collective-noindexing-apply`` and
-``@@collective-noindexing-unapply``.  The first applies some patches
-and the second undoes the patching.  Both can be called multiple times
-safely.
+Add collective.noindexing to the eggs in your buildout.
+This makes two browser views available on the Plone Site root:
+``@@collective-noindexing-apply`` and ``@@collective-noindexing-unapply``.
+The first applies some patches and the second undoes the patching.
+Both can be called multiple times safely.
 
-Patch only a single index (reindex, index, unindex) is also possible:
-``@@collective-noindexing-apply?no-reindex=1``
-``@@collective-noindexing-apply?no-index=1``
-``@@collective-noindexing-apply?no-unindex=1``
+Patching only a single index (reindex, index, unindex) is also possible:
+
+- ``@@collective-noindexing-apply?no-reindex=1``
+- ``@@collective-noindexing-apply?no-index=1``
+- ``@@collective-noindexing-apply?no-unindex=1``
 
 Or combined:
 ``@@collective-noindexing-apply?no-unindex=1&no-reindex=1``
@@ -34,20 +34,7 @@ a lot faster.  You do the indexing later, probably by doing a catalog
 clear and rebuild; you have a bit more control there about
 subtransactions, to help avoid a ``MemoryError`` or ``[Errno 24] Too
 many open files``.  A script to run the catalog clear and rebuild with
-some intermediate commits can help here for large sites; see for
-example
-http://svn.plone.org/svn/plone/Products.PloneOrg/trunk/scripts/catalog_rebuild.py
-
-
-Notes
------
-
-- The patches do not apply to ``ATBTreeFolders`` like the standard
-  Members, events and news Large Plone Folders from Plone 3.  This is
-  not deliberate, so it might change in the future, but for now I do
-  not mind.  It works fine for folders in Plone 4.
-
-- It works for Dexterity content too.
+some intermediate commits can help here for large sites.
 
 
 Alternatives
@@ -76,6 +63,15 @@ Alternatives
   work, but I did not want to bother with that.  We can revisit that
   when indexing becomes a problem all the time instead of just once
   for a clear and rebuild.
+
+
+Compatibility
+-------------
+
+Tried on Plone 4.3, 5.1 and 5.2, on Python 2.7 and 3.7.
+(Note that the tests currently `fail on Plone 5 <https://github.com/collective/collective.noindexing/issues/3>`_, but it seems fine in practice.)
+
+For earlier Plone versions, please use version 1.4.
 
 
 Authors
