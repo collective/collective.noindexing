@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.0b1 (unreleased)
+2.0.0b1 (2019-11-11)
 --------------------
 
 - Removed support for Python 2.6 or lower and Plone 4.2 and lower.  [maurits]
