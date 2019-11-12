@@ -4,7 +4,7 @@ Changelog
 2.0.0b2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Setup Travis. [gotcha]
 
 
 2.0.0b1 (2019-11-11)
