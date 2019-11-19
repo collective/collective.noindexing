@@ -34,8 +34,8 @@ class TestNoIndexingApplied(unittest.TestCase):
 
     layer = NOINDEXING_APPLIED_INTEGRATION_TESTING
 
-    def _makeOne(self):
-        return make_test_doc(self.layer['portal'])
+    def _makeOne(self, suffix=""):
+        return make_test_doc(self.layer['portal'], suffix=suffix)
 
     def testNotIndexed(self):
         portal = self.layer['portal']
@@ -83,7 +83,7 @@ class TestNoIndexingApplied(unittest.TestCase):
 
         # Two
         apply_patches(portal)
-        doc = self._makeOne()
+        doc = self._makeOne('two')
         self.assertEqual(len(catalog.searchResults({})), base_count)
         unapply_patches(portal)
         self.assertEqual(len(catalog.searchResults({})), base_count)
