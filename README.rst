@@ -69,7 +69,6 @@ Compatibility
 -------------
 
 Tried on Plone 4.3, 5.1 and 5.2, on Python 2.7 and 3.7.
-(Note that the tests currently `fail on Plone 5 <https://github.com/collective/collective.noindexing/issues/3>`_, but it seems fine in practice.)
 
 For earlier Plone versions, please use version 1.4.
 
