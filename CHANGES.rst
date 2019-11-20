@@ -4,7 +4,7 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use Travis imports [gotcha]
 
 
 2.0.0 (2019-11-20)

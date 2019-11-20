@@ -1,5 +1,4 @@
-language: python
-sudo: false
+version: ~> 1.0
 matrix:
   include:
     - python: "2.7"
@@ -10,20 +9,5 @@ matrix:
       env: PLONE_VERSION=5.2.x
     - python: "3.7"
       env: PLONE_VERSION=5.2.x
-cache:
-  pip: true
-  directories:
-    - eggs
-before_install:
-  - pip install -r requirements.txt
-  - cp test-$PLONE_VERSION.cfg buildout.cfg
-  - buildout -N -t 3 annotate
-install:
-  - buildout -N -t 3
-script:
-  - bin/test --all
-after_script:
-  - bin/createcoverage --output-dir=parts/test/coverage
-after_success:
-  - pip install -q coveralls
-  - coveralls
+import: collective/buildout.plonetest:travis/default.yml@travis-imports
+
