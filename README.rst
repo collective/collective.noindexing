@@ -73,6 +73,13 @@ Tried on Plone 4.3, 5.1 and 5.2, on Python 2.7 and 3.7.
 For earlier Plone versions, please use version 1.4.
 
 
+Development
+-----------
+
+.. image:: https://coveralls.io/repos/github/collective/collective.noindexing/badge.svg?branch=master
+:target: https://coveralls.io/github/collective/collective.noindexing?branch=master
+
+
 Authors
 -------
 
