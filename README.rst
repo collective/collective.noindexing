@@ -1,4 +1,4 @@
-edit to hopefully trigger Travis
+another edit to hopefully trigger Travis
 
 .. contents::
 
