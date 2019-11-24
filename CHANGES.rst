@@ -4,7 +4,9 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use Travis imports [gotcha]
+
+- Modernize buildout according to ``buildout.plonetest`` README. [gotcha]
 
 
 2.0.0 (2019-11-20)
