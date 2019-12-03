@@ -1,3 +1,4 @@
+# comment to trigger Travis build
 version: ~> 1.0
 import: collective/buildout.plonetest:travis/default.yml
 matrix:
